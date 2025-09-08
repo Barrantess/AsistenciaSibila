@@ -1,0 +1,3 @@
+C:\Users\JR\CMAKE\cmake-3.18.6-win64-x64\bin\cmake.exe -E rm -f CMakeFiles\OSQP.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe cr CMakeFiles\OSQP.dir/objects.a @CMakeFiles\OSQP.dir\objects1.rsp
+C:\msys64\ucrt64\bin\gcc.exe -shared -o out\libOSQP.dll -Wl,--out-implib,out\libOSQP.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\OSQP.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\OSQP.dir\linklibs.rsp

@@ -1,0 +1,678 @@
+Plecs {
+  Name          "OSQP_CC"
+  Version       "4.9"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "3"
+  DatatypeInheritanceConflictMsg "2"
+  ContSampleTimeConflictMsg "2"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands "fcr = 5000;\nTsc=1/(2*fcr);\nL = 2.5e-3\n"
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [0, 23; 1280, 629]
+    ZoomFactor    1
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          SignalDemux
+      Name          "Demux15"
+      Show          off
+      Position      [445, 130]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux21"
+      Show          off
+      Position      [530, 210]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Iout21"
+      Show          off
+      Position      [750, 210]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 24; 1283, 703]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABjAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABQMAAAKIAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":164,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux23"
+      Show          off
+      Position      [260, 130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[2 2]"
+        Show          off
+      }
+    }
+    Component {
+      Type          ZeroOrderHold
+      Name          "Zero-Order\nHold5"
+      Show          off
+      Position      [680, 210]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Ts"
+        Value         "Tsc"
+        Show          off
+      }
+    }
+    Component {
+      Type          StateSpace
+      Name          "State Space"
+      Show          on
+      Position      [605, 210]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "A"
+        Value         "[0 0; 0 0]"
+        Show          off
+      }
+      Parameter {
+        Variable      "B"
+        Value         "[-1/L 0; 0 -1/L]"
+        Show          off
+      }
+      Parameter {
+        Variable      "C"
+        Value         "[1 0 ; 0 1 ]"
+        Show          off
+      }
+      Parameter {
+        Variable      "D"
+        Value         "[0 0; 0 0]"
+        Show          off
+      }
+      Parameter {
+        Variable      "X0"
+        Value         "[2 -1]"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          base64 "Sc6xNQ=="
+      Show          off
+      Position      [730, 130]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 24; 1280, 703]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAADhAAACIfwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAFkA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAAiEAAABjAP///wAAAAMAAAUAAAAAYfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABQAAAABEAP///wAABBkAAAIhAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":64,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      Axes          "2"
+      TimeRange     "0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SineGenerator
+      Name          "Sine"
+      Show          on
+      Position      [135, 135]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Amplitude"
+        Value         "[1 1]"
+        Show          off
+      }
+      Parameter {
+        Variable      "Bias"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Frequency"
+        Value         "100"
+        Show          off
+      }
+      Parameter {
+        Variable      "Phase"
+        Value         "[0 90]"
+        Show          off
+      }
+      Parameter {
+        Variable      "Units"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux16"
+      Show          off
+      Position      [790, 280]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux17"
+      Show          off
+      Position      [785, 175]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Iout22"
+      Show          off
+      Position      [945, 190]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 24; 1280, 670]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAFkA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAAgAAAABjAP///wAAAAMAAAUAAAAAYfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABQAAAABEAP///wAABEYAAAIAAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":163,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      Axes          "2"
+      TimeRange     "0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux24"
+      Show          off
+      Position      [895, 175]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          ZeroOrderHold
+      Name          "Zero-Order\nHold6"
+      Show          off
+      Position      [185, 135]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Ts"
+        Value         "Tsc"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux25"
+      Show          off
+      Position      [895, 200]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Dll
+      Name          "DLL"
+      Show          on
+      Position      [320, 130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Filename"
+        Value         "libOSQP"
+        Show          off
+        Evaluate      off
+      }
+      Parameter {
+        Variable      "SampleTime"
+        Value         "Tsc"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputDelay"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Parameters"
+        Value         "[]"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux23"
+      SrcTerminal   1
+      DstComponent  "DLL"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "State Space"
+      SrcTerminal   2
+      DstComponent  "Zero-Order\nHold5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Zero-Order\nHold5"
+      SrcTerminal   2
+      Points        [705, 210]
+      Branch {
+        DstComponent  "Iout21"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [705, 280]
+        Branch {
+          Points        [235, 280; 235, 125]
+          DstComponent  "Mux23"
+          DstTerminal   2
+        }
+        Branch {
+          DstComponent  "Demux16"
+          DstTerminal   1
+        }
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux24"
+      SrcTerminal   1
+      Points        [910, 175; 910, 185]
+      DstComponent  "Iout22"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux15"
+      SrcTerminal   2
+      Points        [505, 125]
+      Branch {
+        DstComponent  base64 "Sc6xNQ=="
+        DstTerminal   1
+      }
+      Branch {
+        Points        [505, 205]
+        DstComponent  "Mux21"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux15"
+      SrcTerminal   3
+      Points        [495, 135]
+      Branch {
+        DstComponent  base64 "Sc6xNQ=="
+        DstTerminal   2
+      }
+      Branch {
+        Points        [495, 215]
+        DstComponent  "Mux21"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux21"
+      SrcTerminal   1
+      DstComponent  "State Space"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine"
+      SrcTerminal   1
+      DstComponent  "Zero-Order\nHold6"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Zero-Order\nHold6"
+      SrcTerminal   2
+      Points        [215, 135]
+      Branch {
+        DstComponent  "Mux23"
+        DstTerminal   3
+      }
+      Branch {
+        Points        [215, 175]
+        DstComponent  "Demux17"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux25"
+      SrcTerminal   1
+      Points        [910, 200; 910, 195]
+      DstComponent  "Iout22"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux17"
+      SrcTerminal   2
+      DstComponent  "Mux24"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux17"
+      SrcTerminal   3
+      Points        [805, 180; 805, 195]
+      DstComponent  "Mux25"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux16"
+      SrcTerminal   2
+      Points        [825, 275; 825, 180]
+      DstComponent  "Mux24"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux16"
+      SrcTerminal   3
+      Points        [830, 285; 830, 205]
+      DstComponent  "Mux25"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "DLL"
+      SrcTerminal   2
+      DstComponent  "Demux15"
+      DstTerminal   1
+    }
+    Annotation {
+      Name          "<html><body>\n<p>Control de corriente circulante con </p>"
+"\n<p>seguimiento de referencia.</p></body></html>"
+      Position      [505, 310]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p>Acciones de control e</p>\n<p>iteracione"
+"s del Active Set</p></body></html>"
+      Position      [825, 125]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p>Estados</p></body></html>"
+      Position      [750, 240]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p>Estados y</p>\n<p>referencias</p></body>"
+"</html>"
+      Position      [1005, 190]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p>Estados de referencia</p></body></html>"
+      Position      [155, 180]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-size:16px;\">Importa"
+"nte: NO tiene los retardos temporales</span></p></body></html>"
+      Position      [285, 400]
+    } 
+  }
+}

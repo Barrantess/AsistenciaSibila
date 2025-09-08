@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ECOSito.dir/solver_code/ecos_bb/ecos_bb.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/ecos_bb/ecos_bb_preproc.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_1.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_2.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_aat.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_control.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_defaults.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_dump.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_global.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_info.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_order.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_post_tree.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_postorder.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_preprocess.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/amd/src/amd_valid.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/external/ldl/src/ldl.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/cone.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/ctrlc.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/ecos.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/equil.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/expcone.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/kkt.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/preproc.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/spla.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/splamm.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/timer.c.obj"
+  "CMakeFiles/ECOSito.dir/solver_code/src/wright_omega.c.obj"
+  "CMakeFiles/ECOSito.dir/src/cpg_example.c.obj"
+  "CMakeFiles/ECOSito.dir/src/cpg_solve.c.obj"
+  "CMakeFiles/ECOSito.dir/src/cpg_workspace.c.obj"
+  "out/libECOSito.dll"
+  "out/libECOSito.dll.a"
+  "out/libECOSito.dll.manifest"
+  "out/libECOSito.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/ECOSito.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

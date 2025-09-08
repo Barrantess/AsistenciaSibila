@@ -1,0 +1,5 @@
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/OSQP_CC/c/build/CMakeFiles/OSQP.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/OSQP_CC/c/build/CMakeFiles/edit_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/OSQP_CC/c/build/CMakeFiles/rebuild_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/OSQP_CC/c/build/solver_code/CMakeFiles/edit_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/OSQP_CC/c/build/solver_code/CMakeFiles/rebuild_cache.dir

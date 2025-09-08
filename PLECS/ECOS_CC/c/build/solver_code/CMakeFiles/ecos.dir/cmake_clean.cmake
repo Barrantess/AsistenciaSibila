@@ -1,0 +1,38 @@
+file(REMOVE_RECURSE
+  "../out/libecos.dll"
+  "../out/libecos.dll.a"
+  "../out/libecos.dll.manifest"
+  "../out/libecos.pdb"
+  "CMakeFiles/ecos.dir/ecos_bb/ecos_bb.c.obj"
+  "CMakeFiles/ecos.dir/ecos_bb/ecos_bb_preproc.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_1.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_2.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_aat.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_control.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_defaults.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_dump.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_global.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_info.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_order.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_post_tree.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_postorder.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_preprocess.c.obj"
+  "CMakeFiles/ecos.dir/external/amd/src/amd_valid.c.obj"
+  "CMakeFiles/ecos.dir/external/ldl/src/ldl.c.obj"
+  "CMakeFiles/ecos.dir/src/cone.c.obj"
+  "CMakeFiles/ecos.dir/src/ctrlc.c.obj"
+  "CMakeFiles/ecos.dir/src/ecos.c.obj"
+  "CMakeFiles/ecos.dir/src/equil.c.obj"
+  "CMakeFiles/ecos.dir/src/expcone.c.obj"
+  "CMakeFiles/ecos.dir/src/kkt.c.obj"
+  "CMakeFiles/ecos.dir/src/preproc.c.obj"
+  "CMakeFiles/ecos.dir/src/spla.c.obj"
+  "CMakeFiles/ecos.dir/src/splamm.c.obj"
+  "CMakeFiles/ecos.dir/src/timer.c.obj"
+  "CMakeFiles/ecos.dir/src/wright_omega.c.obj"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/ecos.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

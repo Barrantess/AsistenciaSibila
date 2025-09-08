@@ -1,0 +1,3 @@
+C:\Users\JR\CMAKE\cmake-3.18.6-win64-x64\bin\cmake.exe -E rm -f CMakeFiles\SCS.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe cr CMakeFiles\SCS.dir/objects.a @CMakeFiles\SCS.dir\objects1.rsp
+C:\msys64\ucrt64\bin\gcc.exe -O3 -DNDEBUG -shared -o out\libSCS.dll -Wl,--out-implib,out\libSCS.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\SCS.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\SCS.dir\linklibs.rsp

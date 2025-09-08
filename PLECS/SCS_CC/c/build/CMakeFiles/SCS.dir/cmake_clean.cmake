@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/SCS.dir/solver_code/linsys/cpu/direct/private.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/csparse.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/SuiteSparse_config.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_1.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_2.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_aat.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_control.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_defaults.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_dump.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_global.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_info.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_order.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_post_tree.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_postorder.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_preprocess.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/amd/amd_valid.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/external/qdldl/qdldl.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/linsys/scs_matrix.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/aa.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/cones.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/ctrlc.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/linalg.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/normalize.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/rw.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/scs.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/scs_version.c.obj"
+  "CMakeFiles/SCS.dir/solver_code/src/util.c.obj"
+  "CMakeFiles/SCS.dir/src/cpg_example.c.obj"
+  "CMakeFiles/SCS.dir/src/cpg_solve.c.obj"
+  "CMakeFiles/SCS.dir/src/cpg_workspace.c.obj"
+  "out/libSCS.dll"
+  "out/libSCS.dll.a"
+  "out/libSCS.dll.manifest"
+  "out/libSCS.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/SCS.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

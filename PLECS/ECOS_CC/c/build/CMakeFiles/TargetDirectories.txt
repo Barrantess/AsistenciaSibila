@@ -1,0 +1,14 @@
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/ECOSito.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/install/local.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/install.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/edit_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/rebuild_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/list_install_components.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/CMakeFiles/install/strip.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/ecos.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/install/local.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/install.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/edit_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/rebuild_cache.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/list_install_components.dir
+C:/Users/JR/CProjects/PlecsDLL/MCC_CC/ECOS_CC/c/build/solver_code/CMakeFiles/install/strip.dir
